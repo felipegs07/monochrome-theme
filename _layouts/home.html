@@ -5,13 +5,35 @@ layout: default
 <section class="container">
     <article class="split left">
         <div id="particles-js">
-            <button class="btn">Ver Portfólio</button>
+            <button id="btn-portfolio" class="btn">Ver Portfólio</button>
+            <section class="portfolio">
+                {% for post in site.posts %}
+                    <article class="project">
+                        <a href="{{ post.url | prepend: base.url }}" target="_blank" class="project-name">{{ post.title }}</a>
+                        <article class="project-desc">{{ post.desc }}</article>
+                        <a href="{{ post.url | prepend: base.url }}" target="_blank" class="btn btn-project">Ver Projeto</a>
+                    </article>
+                {% endfor %}
+            </section>
         </div>
     </article>
     <article class="split right">
         <article class="information-box">
             <h1 class="info-name">Felipe Gustavo da Silva</h1>
             <h2 class="info-title">Desenvolvedor Front-end</h2>
+            <p class="info-text">
+                Eu sou um desenvolvedor front-end júnior com foco em me desenvolver na criação de web apps e UI. Como programador estou em busca constante de melhores práticas e conhecimento. 
+                Gosto de aprender coisas novas, me interesso por javascript e seus frameworks, design de interface/UX e Test-Driven Development. 
+                <br><br>
+                <span class="info-skills">Habilidades:</span><br>
+                HTML; Responsive Design (Mobile First); CSS 3 (Sass); Css Frameworks (Bootstrap); Javascript (Testes); Automatizadores (Gulp, Webpack, Npm); Git; Test-Driven Development (Mocha, Chai, Istanbul). 
+            </p>
+            <article class="contact">
+                <a href="https://github.com/felipegs07" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/felipegdasilva/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://medium.com/@felipegs07" target="_blank"><i class="fab fa-medium-m"></i></a>
+                <a href="mailto:felipegdas07@gmail.com" target="_blank"><i class="fas fa-envelope-open"></i></a>
+            </article>
         </article>
     </article>
 </section>

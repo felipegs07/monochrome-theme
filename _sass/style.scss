@@ -1,6 +1,6 @@
 $mono-color: #000000;
 $secondary-color: #fff;
-$time: 500ms;
+$time: 400ms;
 $hover-side-width: 65%;
 $hover-other-width: 35%;
 @import url('https://fonts.googleapis.com/css?family=Rajdhani');
@@ -53,11 +53,13 @@ canvas {
         position: absolute;
         left: 10%;
         top: 80%;
+        text-decoration: none;
 
         &:hover{
             background: rgba($mono-color, 0.9);
             color: $secondary-color;
             transition: $time all ease-in-out;
+            cursor: pointer;
         }
 
     }
@@ -112,6 +114,39 @@ canvas {
                 font-size: 1.1rem;
                 color: $secondary-color;
             }
+
+            .info-text {
+                font-size: 1rem;
+                margin-top: 20%;
+                line-height: 1.1rem;
+                position: absolute;
+                width:100%;
+                right: 5%;
+                text-align: right;
+            }
+
+            .info-skills {
+                font-size: 1.3rem;
+            }
+
+            .contact {
+                margin-top: 150%;
+                position: absolute;
+                right: 5%;
+
+                a {
+                    color: #DCDCDC;
+                    font-size: 1.2em;
+                    transition: color 0.3s linear;
+                    margin-right: 10px;
+                    margin-left: 10px;
+
+                    &:hover {
+                        color:#404040;
+                        transition: color 0.3s linear;
+                    }
+                }
+            }
         }
 
         &.hover-right .information-box {
@@ -124,4 +159,55 @@ canvas {
         }
     }
 
+    .portfolio {
+        height: 90%;
+        width: 95%;
+        position: absolute;
+        top: 5%;
+        left: -95%;
+        background: rgba(#404040, 0.1);
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        .project {
+            width: 90%;
+            margin: 0.5rem auto;
+            background: rgba($color: $secondary-color, $alpha: 0.7);
+            padding: 2rem 1.5rem;
+            overflow: hidden;
+
+            .btn-project {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                width: 10%;
+            }
+
+            .project-name {
+                font-size: 1.7rem;
+                margin-bottom: 0.4rem;
+                color: $mono-color;
+            }
+        }
+    }
+    .portfolio-fadein {
+        left: 0;
+        transition: $time all ease-in-out;
+    }
+
+}
+
+//scrollbar style
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    
+    &:hover {
+        background: #555;
+    }
 }
