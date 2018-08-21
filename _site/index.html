@@ -9,17 +9,26 @@
 </head>
 <body>
     <section class="container">
-    <article class="split left-side">
-        <h1>Teste</h1>
+    <article class="split left">
+        <div id="particles-js">
+            <button class="btn">Ver Portfólio</button>
+        </div>
     </article>
-    <article class="split right-side">
+    <article class="split right">
         <article class="information-box">
-            <h1>Felipe Gustavo da Silva</h1>
-            <h2>Desenvolvedor Front-end</h2>
+            <h1 class="info-name">Felipe Gustavo da Silva</h1>
+            <h2 class="info-title">Desenvolvedor Front-end</h2>
         </article>
     </article>
 </section>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+<script>
+    particlesJS.load('particles-js', 'particlesjs.json', function() {
+        console.log('particles.js config loaded');
+    });
+</script>
 </body>
 </html>
