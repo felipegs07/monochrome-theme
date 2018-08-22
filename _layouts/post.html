@@ -2,4 +2,10 @@
 layout: default
 ---
 
-{{ content }}
+<section class="portfolio-header" style="background-color:{{ page.color }}">
+    <article class="portfolio-title" style="color: {{ page.color-text }}"><h2>{{ page.title }}</h2></article>
+</section>
+<section class="container-portfolio">
+    <article class="portfolio-stack">Tecnologias: {{ page.stack }}</article>
+    {{ content }}
+</section>

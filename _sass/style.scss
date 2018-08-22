@@ -14,8 +14,6 @@ html, body {
     overflow-x: hidden;
     line-height: 1;
     font-family: 'Rajdhani', sans-serif;
-
-
 }
 
 a {
@@ -81,6 +79,8 @@ canvas {
             height: 100%;
             background: rgba($mono-color, 0.1);
         }
+
+        
 
     }
     .right {
@@ -176,17 +176,15 @@ canvas {
             padding: 2rem 1.5rem;
             overflow: hidden;
 
-            .btn-project {
-                position: absolute;
-                top: 5%;
-                right: 10%;
-                width: 10%;
-            }
-
             .project-name {
                 font-size: 1.7rem;
                 margin-bottom: 0.4rem;
                 color: $mono-color;
+            }
+
+            &:hover {
+                border: 3px solid $mono-color;
+                transition: $time all ease-in-out;
             }
         }
     }
@@ -209,5 +207,73 @@ canvas {
     
     &:hover {
         background: #555;
+    }
+}
+
+//portfolio
+.container-portfolio {
+    width: 50%;
+    padding: 0 25%;
+    text-align: justify;
+    margin-top: 40px;
+
+    .portfolio-stack {
+        color: rgba($mono-color, 0.7);
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+.portfolio-header {
+    width: 100%;
+    height: 50vh;
+    line-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    .portfolio-title h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 666px){
+    .container {
+        height: 200%;
+
+        .right {
+            top: 0;
+
+            .information-box {
+                top: 10%;
+            }
+        }
+
+        .left {
+            bottom: 0;
+        }
+    }
+    .container .split {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+
+@media screen and (max-width: 750px){
+    .container-portfolio {
+        width: 90%;
+        padding: 0 5%;
+
+    }
+
+    .portfolio-header {
+
+        .portfolio-title h2 {
+            font-size: 1.8rem;
+        }
     }
 }
