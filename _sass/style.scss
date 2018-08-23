@@ -16,6 +16,10 @@ html, body {
     font-family: 'Rajdhani', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
 a {
     text-decoration: none;
 }
@@ -48,9 +52,6 @@ canvas {
         font-size: 1rem;
         color: rgba($mono-color, 0.9);
         background: transparent;
-        position: absolute;
-        left: 10%;
-        top: 80%;
         text-decoration: none;
 
         &:hover{
@@ -60,6 +61,12 @@ canvas {
             cursor: pointer;
         }
 
+    }
+
+    .btn-portfolio-position {
+        position: absolute;
+        left: 10%;
+        top: 80%;
     }
 
     .split {
@@ -148,6 +155,24 @@ canvas {
                     }
                 }
             }
+
+            .btn-blog {
+                padding: 0.8rem 2rem;
+                border: 2px solid $secondary-color;
+                font-size: 1rem;
+                color: $secondary-color;
+                background: transparent;
+                text-decoration: none;
+                margin-top:170%;
+        
+                &:hover{
+                    background: $secondary-color;
+                    color: $mono-color;
+                    transition: $time all ease-in-out;
+                    cursor: pointer;
+                }
+            }
+
         }
 
         &.hover-right .information-box {
@@ -165,7 +190,6 @@ canvas {
         width: 95%;
         position: absolute;
         top: 5%;
-        left: -95%;
         background: rgba(#404040, 0.1);
         overflow-x: hidden;
         overflow-y: scroll;
@@ -189,7 +213,11 @@ canvas {
             }
         }
     }
-    .portfolio-fadein {
+
+    .portfolio-left {
+        left: -95%;
+    }
+    .portfolio-left-fadein {
         left: 0;
         transition: $time all ease-in-out;
     }
@@ -225,6 +253,7 @@ canvas {
         margin-bottom: 30px;
     }
 }
+
 .portfolio-header {
     width: 100%;
     height: 50vh;
@@ -241,6 +270,103 @@ canvas {
     }
 }
 
+//blog modal
+.modal{
+    display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .modal-content{
+        width: 60%;
+        height:450px;
+        margin: auto;
+        position:fixed;
+        top:0; bottom:0; left:0; right:0;
+        background-color: #fff;
+        box-shadow: 0px 0px 6px #404040;
+        text-align: left;
+        padding: 30px;
+        line-height: 1.4em;
+        overflow: hidden;
+        animation-name: modalopen;
+        animation-duration: 1s;
+
+        .close-btn{
+            float: right;
+            color: #7F7F7F;
+            font-size: 3em;
+            margin-top: 10px;
+        }
+        .close-btn:hover{
+            cursor: pointer;
+            color: #000;
+        
+        }
+
+        .modal-header h2{
+            color: #404040;
+            font-weight: 400;
+            padding-bottom: 20px;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-footer {
+           width: 170px;
+           margin: 30px auto auto auto;
+           font-size: initial;
+
+           .btn-allposts {
+                color: $mono-color;
+                padding: 0.5em 1em;
+                border: $mono-color 2px solid;
+                margin: 0 10px 0 10px;
+                text-decoration: none;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    background-color: rgba($mono-color, 0.9);
+                    color: $secondary-color;
+                    border-color: $mono-color;
+                    transition: all 0.3s linear;
+                    text-decoration: none;
+                }
+            }
+        
+        }
+
+        .modal-items h3{
+            display: inline-block;
+            font-weight: 400;
+        
+        }
+        .modal-items a{
+            display: inline-block;
+            text-decoration: none;
+            color: $mono-color;
+        }
+        .modal-items a:hover{
+            color: #000;
+        }
+        
+        .modal-items span{
+            color: #7f7f7f
+        }
+
+    }
+    
+}
+
+@import "animations";
+
+
+
+//responsiveness
 @media screen and (max-width: 666px){
     .container {
         height: 200%;

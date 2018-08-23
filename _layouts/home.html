@@ -5,8 +5,8 @@ layout: default
 <section class="container">
     <article class="split left">
         <div id="particles-js">
-            <button id="btn-portfolio" class="btn">Ver Portfólio</button>
-            <section class="portfolio">
+            <button id="btn-portfolio" class="btn btn-portfolio-position">ver portfólio</button>
+            <section id="portfolio" class="portfolio portfolio-left">
                 {% for post in site.posts %}
                     <article class="project">
                         <a href="{{ post.url | prepend: base.url }}" target="_blank" class="project-name">{{ post.title }}</a>
@@ -18,24 +18,42 @@ layout: default
     </article>
     <article class="split right">
         <article class="information-box">
-            <h1 class="info-name">Felipe Gustavo da Silva</h1>
-            <h2 class="info-title">Desenvolvedor Front-end</h2>
+            <h1 class="info-name">{{ site.name }}</h1>
+            <h2 class="info-title">{{ site.job_title }}</h2>
             <p class="info-text">
-                Eu sou um desenvolvedor front-end júnior com foco em me desenvolver na criação de web apps e UI. Como programador estou em busca constante de melhores práticas e conhecimento. 
-                Gosto de aprender coisas novas, me interesso por javascript e seus frameworks, design de interface/UX e Test-Driven Development. 
+                {{ site.description }}
                 <br><br>
-                <span class="info-skills">Habilidades:</span><br>
-                HTML; Responsive Design (Mobile First); CSS 3 (Sass); Css Frameworks (Bootstrap); Javascript (Testes); Automatizadores (Gulp, Webpack, Npm); Git; Test-Driven Development (Mocha, Chai, Istanbul). 
+                    <span class="info-skills">
+                        {{ site.skills_title }}:
+                    </span>
+                    <br>
+                {{ site.skills }}
             </p>
             <article class="contact">
-                <a href="https://github.com/felipegs07" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/felipegdasilva/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://medium.com/@felipegs07" target="_blank"><i class="fab fa-medium-m"></i></a>
-                <a href="mailto:felipegdas07@gmail.com" target="_blank"><i class="fas fa-envelope-open"></i></a>
+                <a href="{{ site.github_username }}" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="{{ site.linkedin_username }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="{{ site.medium_username }}" target="_blank"><i class="fab fa-medium-m"></i></a>
+                <a href="mailto:{{ site.email }}" target="_blank"><i class="fas fa-envelope-open"></i></a>
             </article>
             <article class="blog">
-                
+                <button id="btn-blog" class="btn-blog">ver blog</button>
             </article>
         </article>
     </article>
 </section>
+
+
+<section id="posts" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <div class="modal-header">
+            <h2>últimos posts</h2>
+        </div>
+        <div class="modal-items"></div>
+        <div class="modal-footer">
+            <a href="https://medium.com/@felipegs07" class="btn-allposts" target="_blank">todos os posts</a>
+        </div>
+    </div>
+</section>
+
+{% include posts.html %}

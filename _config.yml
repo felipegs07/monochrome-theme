@@ -1,34 +1,27 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Your awesome title
+# Global variables
+title: Felipe G. Silva | Front-end Developer
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+name: Felipe Gustavo da Silva
+job_title: Desenvolvedor Front-end
+description: >-
+  Eu sou um desenvolvedor front-end júnior com foco em me desenvolver na criação de web apps e UI. 
+  Como programador estou em busca constante de melhores práticas e conhecimento. 
+  Gosto de aprender coisas novas, me interesso por javascript e seus frameworks, design de interface/UX e ]
+  Test-Driven Development. 
+skills: >-
+  HTML; Responsive Design (Mobile First); CSS 3 (Sass); Css Frameworks (Bootstrap); Javascript (Testes); 
+  Automatizadores (Gulp, Webpack, Npm); Git; Test-Driven Development (Mocha, Chai, Istanbul). 
+skills_title: Habilidades
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+linkedin_username: https://www.linkedin.com/in/felipegdasilva/
+github_username:  https://github.com/felipegs07
+medium_username: https://medium.com/@felipegs07
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
-
 sass:
     style: compressed
 
