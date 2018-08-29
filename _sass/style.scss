@@ -361,6 +361,19 @@ canvas {
     }
     
 }
+ 
+//scroll effect on post page
+.header-scrolled {
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    margin-bottom: 10vh;
+    box-shadow: 0px 3px 3px rgba($mono-color, 0.3);
+
+    .portfolio-title h2{
+        font-size: 1.5rem;
+    }
+}
 
 @import "animations";
 

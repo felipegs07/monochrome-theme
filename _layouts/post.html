@@ -2,10 +2,12 @@
 layout: default
 ---
 
-<section class="portfolio-header" style="background-color:{{ page.color }}">
-    <article class="portfolio-title" style="color: {{ page.color-text }}"><h2>{{ page.title }}</h2></article>
-</section>
+<header id="header" class="portfolio-header" style="background-color:{{ page.color }}">
+    <nav class="portfolio-title" style="color: {{ page.color-text }}"><h2>{{ page.title }}</h2></nav>
+</header>
 <section class="container-portfolio">
     <article class="portfolio-stack">Tecnologias: {{ page.stack }}</article>
     {{ content }}
 </section>
+
+{% include post-scripts.html %}
