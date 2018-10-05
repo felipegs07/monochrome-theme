@@ -8,6 +8,8 @@ desc: "Teste de descrição a ser usada"
 stack: "HTML5, CSS3, Javascript ES6, Bootstrap"
 color: "#563D7B"
 color-text: "#fff"
+github: "https://github.com/felipegs07/bootminimal"
+demo: "https://google.com"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

@@ -270,6 +270,33 @@ canvas {
     }
 }
 
+.container-buttons-links {
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-project {
+    color: $mono-color;
+    font-size: 1.1rem;
+    padding: 0.3rem 1.5rem;
+    border: $mono-color 1px solid;
+    margin: auto;
+    text-decoration: none;
+    transition: all 0.3s linear;
+    width: 70px;
+    height: 17px;
+    margin-bottom: 30px;
+
+    &:hover{
+        background: $mono-color;
+        color: $secondary-color;
+        transition: $time all ease-in-out;
+        cursor: pointer;
+    }
+}
+
 //blog modal
 .modal{
     display:none;
